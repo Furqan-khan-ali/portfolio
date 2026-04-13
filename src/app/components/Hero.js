@@ -66,7 +66,7 @@ export default function Hero() {
             style={{ animationDelay: "0.5s" }}
           >
             <a
-              href="https://github.com"
+              href="https://github.com/Furqan-khan-ali"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] text-[#f5f5f5]/70 hover:text-[#6366f1] hover:border-[#6366f1] transition-all duration-200 text-sm"
@@ -74,7 +74,7 @@ export default function Hero() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/furqan-khan-ali"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] text-[#f5f5f5]/70 hover:text-[#6366f1] hover:border-[#6366f1] transition-all duration-200 text-sm"
