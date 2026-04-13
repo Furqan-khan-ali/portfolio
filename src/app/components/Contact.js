@@ -6,8 +6,8 @@ const contactInfo = [
   {
     icon: "📧",
     label: "Email",
-    value: "your.email@example.com",
-    href: "mailto:your.email@example.com",
+    value: "furqankhanku@gmail.com",
+    href: "mailto:furqankhanku@gmail.com",
   },
   {
     icon: "📞",
@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: "📍",
     label: "Location",
-    value: "Your City, Country",
+    value: "Karachi, Pakistan",
     href: "#",
   },
 ];

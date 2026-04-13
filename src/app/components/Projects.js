@@ -1,6 +1,16 @@
 "use client";
 
 const projects = [
+ {
+  title: "Developer Portfolio Website",
+  description:
+    "A modern and fully responsive personal portfolio website built with Next.js to showcase my projects, skills, and experience. Features clean UI, fast performance, and optimized design to highlight my development work and attract potential clients.",
+  image: "/project1.jpg",
+  tags: ["Next.js", "React.js", "Tailwind CSS", "Responsive Design", "UI/UX", "Performance Optimization"],
+  liveUrl: "https://my-portfolio-three-pi-71.vercel.app/",
+  githubUrl: "https://github.com/Furqan-khan-ali/portfolio",
+  featured: true,
+ },
   {
     title: "Law Firm Website",
     description:
