@@ -61,7 +61,7 @@ const projects = [
     image: "/project5.jpg",
     tags: ["Flutter", "Dart", "REST API", "Mobile UI", "API Integration"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Furqan-khan-ali/countries-detail",
     featured: false,
   },
   {
@@ -91,7 +91,7 @@ const projects = [
     image: "/project8.jpg",
     tags: ["Flutter", "Dart", "Google Books API", "Search", "Mobile UI"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Furqan-khan-ali/books_fetching",
     featured: false,
   },
   {
