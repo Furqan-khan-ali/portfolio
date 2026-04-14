@@ -1,9 +1,9 @@
 "use client";
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com" },
-  { name: "LinkedIn", href: "https://linkedin.com" },
-  { name: "Twitter", href: "https://twitter.com" },
+  { name: "GitHub", href: "https://github.com/Furqan-khan-ali" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/feed/" },
+  { name: "Twitter", href: "https://x.com/FurqanAliK77477" },
 ];
 
 const navLinks = [
@@ -21,7 +21,7 @@ export default function Footer() {
     <footer className="py-12 border-t border-[#2a2a2a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo */}
+          
           <a href="/" className="text-xl font-bold gradient-text">
             Portfolio
           </a>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
+        
         <div className="mt-8 pt-8 border-t border-[#2a2a2a] text-center">
           <p className="text-sm text-[#f5f5f5]/50">
             Made by Furqan Ali Khan

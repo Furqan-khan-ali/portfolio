@@ -11,16 +11,37 @@ const projects = [
   githubUrl: "https://github.com/Furqan-khan-ali/portfolio",
   featured: true,
  },
+ {
+    title: "Invoice Management System",
+    description:
+      "A web-based invoice management system that enables users to create, manage, and track invoices in real time using Supabase. Designed for efficiency and ease of use with a clean dashboard interface.",
+    image: "/project3.jpg",
+    tags: ["React.js", "Tailwind CSS", "Supabase", "JavaScript", "Dashboard", "Real-time Data"],
+    liveUrl: "https://invoice-system-peach.vercel.app/",
+    githubUrl: "https://github.com/Furqan-khan-ali/invoice-system-with-supabase",
+    featured: false,
+  },
+ {
+    title: "University Portal System",
+    description:
+      "A student-focused university portal that provides access to academic records, course details, and announcements. Built with a scalable backend using Supabase for seamless data management.",
+    image: "/project4.jpg",
+    tags: ["React.js", "Supabase", "Authentication", "Dashboard", "API Integration"],
+    liveUrl: "https://university-portal-sys.vercel.app/",
+    githubUrl: "https://github.com/Furqan-khan-ali/university-portal-sys-subabase",
+    featured: false,
+  },
   {
     title: "Law Firm Website",
     description:
       "A modern and fully responsive law firm website designed to showcase legal services, improve client engagement, and provide an easy way for users to contact attorneys through integrated forms.",
     image: "/project1.jpg",
-    tags: ["React.js", "JavaScript", "Tailwind CSS", "Responsive Design", "UI/UX"],
+    tags: ["React.js", "JavaScript", "Responsive Design", "UI/UX"],
     liveUrl: "https://law-firm-website-phi.vercel.app/",
     githubUrl: "https://github.com/Furqan-khan-ali/law-firm-website",
     featured: true,
   },
+  
   {
     title: "University Management System",
     description:
@@ -31,26 +52,8 @@ const projects = [
     githubUrl: "https://github.com/Furqan-khan-ali/University-Management-System-React-Js-MySQL-XAMPP",
     featured: true,
   },
-  {
-    title: "Invoice Management System",
-    description:
-      "A web-based invoice management system that enables users to create, manage, and track invoices in real time using Supabase. Designed for efficiency and ease of use with a clean dashboard interface.",
-    image: "/project3.jpg",
-    tags: ["React.js", "Supabase", "JavaScript", "Dashboard", "Real-time Data"],
-    liveUrl: "https://invoice-system-peach.vercel.app/",
-    githubUrl: "https://github.com/Furqan-khan-ali/invoice-system-with-supabase",
-    featured: false,
-  },
-  {
-    title: "University Portal System",
-    description:
-      "A student-focused university portal that provides access to academic records, course details, and announcements. Built with a scalable backend using Supabase for seamless data management.",
-    image: "/project4.jpg",
-    tags: ["React.js", "Supabase", "Authentication", "Dashboard", "API Integration"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: false,
-  },
+  
+  
   {
     title: "Countries Explorer App",
     description:

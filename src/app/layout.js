@@ -12,8 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio | Full Stack Developer",
-  description: "Professional portfolio showcasing full-stack development skills, projects, and experience. Let's build something amazing together.",
+  title: "Furqan Khan | Frontend Developer",
+  description:
+    "Frontend Developer building responsive web apps with React and Next.js. Expanding into Flutter mobile development and backend technologies like Node.js, Supabase, and SQL Server.",
 };
 
 export default function RootLayout({ children }) {
