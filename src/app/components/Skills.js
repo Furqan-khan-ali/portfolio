@@ -68,11 +68,9 @@ const skillCategories = [
 export default function Skills() {
   return (
     <section id="skills" className="py-24 relative">
-      {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#6366f1]/10 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
           <span className="text-[#6366f1] font-semibold text-sm uppercase tracking-wider">
             My Skills
@@ -86,7 +84,6 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category) => (
             <div

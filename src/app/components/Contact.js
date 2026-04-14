@@ -37,32 +37,51 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://formspree.io/f/mwvapkbg", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setSubmitted(false), 5000);
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        console.error("Formspree error:", errorData);
+        alert("Failed to send message: " + (errorData.error || "Please try again."));
+      }
+    } catch (error) {
+      console.error("Submit error:", error);
+      alert("Error sending message. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const whatsappNumber = "+03312832363"; // Replace with your WhatsApp number
+  const whatsappNumber = "+03312832363"; 
   const whatsappMessage = encodeURIComponent("Hi! I saw your portfolio and I'd like to discuss a project with you.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
     <section id="contact" className="py-24 relative">
-      {/* Background decoration */}
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#06b6d4]/10 rounded-full blur-[120px] -translate-y-1/2" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#06b6d4]/10 rounded-full blur-[120px] -translate-y-1/2 -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
           <span className="text-[#6366f1] font-semibold text-sm uppercase tracking-wider">
             Get In Touch
@@ -77,7 +96,6 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <p className="text-[#f5f5f5]/70 mb-8">
@@ -103,7 +121,6 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* WhatsApp Button */}
             <a
               href={whatsappUrl}
               target="_blank"
@@ -114,8 +131,7 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* Contact Form */}
-          <div className="gradient-border p-8">
+          <div className="gradient-border p-8 relative z-20 pointer-events-auto">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
             {submitted ? (
@@ -124,12 +140,18 @@ export default function Contact() {
                   ✓
                 </div>
                 <h4 className="text-xl font-semibold mb-2">Message Sent!</h4>
-                <p className="text-[#f5f5f5]/70">
+                <p className="text-[#f5f5f5]/70 mb-4">
                   Thank you for reaching out. I&apos;ll get back to you soon.
                 </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="px-4 py-2 rounded-lg bg-[#6366f1] text-white text-sm hover:opacity-90 transition-opacity"
+                >
+                  Send Another Message
+                </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 pointer-events-auto">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm text-[#f5f5f5]/70 mb-2">Your Name</label>
@@ -137,7 +159,10 @@ export default function Contact() {
                       type="text"
                       name="name"
                       value={formData.name}
-                      onChange={handleChange}
+                      onChange={(e) => {
+                        console.log("Name changed:", e.target.value);
+                        handleChange(e);
+                      }}
                       required
                       className="w-full px-4 py-3 rounded-xl bg-[#0f0f0f] border border-[#2a2a2a] text-[#f5f5f5] placeholder-[#f5f5f5]/30 focus:border-[#6366f1] focus:outline-none transition-colors"
                       placeholder="Ali Khan"
@@ -186,7 +211,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white font-semibold hover:opacity-90 transition-all duration-200 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white font-semibold hover:opacity-90 transition-all duration-200 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 pointer-events-auto"
                 >
                   {isSubmitting ? (
                     <>

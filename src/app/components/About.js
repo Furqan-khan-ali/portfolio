@@ -28,7 +28,6 @@ export default function About() {
     <section id="about" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
           <div>
             <span className="text-[#6366f1] font-semibold text-sm uppercase tracking-wider">
               About Me
@@ -47,7 +46,6 @@ export default function About() {
               open-source projects, or sharing knowledge with the developer community.
             </p>
 
-            {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold gradient-text">5+</div>
@@ -64,7 +62,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Highlights Grid */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, index) => (
               <div

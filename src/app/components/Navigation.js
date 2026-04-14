@@ -34,7 +34,6 @@ export default function Navigation() {
             Portfolio
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -47,7 +46,6 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg text-[#f5f5f5] hover:bg-[#1a1a1a] transition-colors text-xl"
@@ -57,7 +55,6 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-[#0f0f0f]/95 backdrop-blur-md border-t border-[#2a2a2a]">
           <div className="px-4 py-4 space-y-2">

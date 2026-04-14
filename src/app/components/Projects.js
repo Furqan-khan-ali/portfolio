@@ -109,12 +109,10 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="py-24 relative">
-      {/* Background decoration */}
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8b5cf6]/10 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16">
+          <div className="text-center mb-16">
           <span className="text-[#6366f1] font-semibold text-sm uppercase tracking-wider">
             Portfolio
           </span>
@@ -127,7 +125,6 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
@@ -136,7 +133,6 @@ export default function Projects() {
                 project.featured ? "md:col-span-2 lg:col-span-1" : ""
               }`}
             >
-              {/* Project Image */}
               <div className="relative h-48 bg-gradient-to-br from-[#6366f1]/20 to-[#8b5cf6]/20 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-[#1a1a1a] flex items-center justify-center">
                   <div className="text-6xl font-bold text-[#2a2a2a]">
@@ -146,7 +142,6 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] to-transparent opacity-60" />
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-[#6366f1] transition-colors">
                   {project.title}
@@ -155,7 +150,6 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
@@ -167,7 +161,6 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Links */}
                 <div className="flex gap-4 relative z-20">
                   {project.liveUrl !== "#" && (
                     <a
@@ -195,7 +188,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* View More */}
         <div className="text-center mt-12">
           <a
             href="https://github.com/Furqan-khan-ali"

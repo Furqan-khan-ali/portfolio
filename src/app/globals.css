@@ -34,7 +34,6 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -52,7 +51,6 @@ body {
   background: linear-gradient(180deg, var(--primary-hover), var(--secondary));
 }
 
-/* Gradient text */
 .gradient-text {
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
   -webkit-background-clip: text;
@@ -60,12 +58,10 @@ body {
   background-clip: text;
 }
 
-/* Glow effect */
 .glow {
   box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
 }
 
-/* Animated gradient border */
 .gradient-border {
   position: relative;
   background: var(--card);
@@ -83,9 +79,9 @@ body {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+  pointer-events: none;
 }
 
-/* Fade in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -101,7 +97,6 @@ body {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Pulse glow */
 @keyframes pulseGlow {
   0%, 100% {
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
@@ -115,7 +110,6 @@ body {
   animation: pulseGlow 2s ease-in-out infinite;
 }
 
-/* Floating animation */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
