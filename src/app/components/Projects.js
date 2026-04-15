@@ -81,7 +81,7 @@ const projects = [
     image: "/project7.jpg",
     tags: ["Flutter", "Dart", "REST API", "Location Services", "API Integration"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Furqan-khan-ali/weather_app_new",
     featured: false,
   },
   {
