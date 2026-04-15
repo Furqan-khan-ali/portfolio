@@ -101,7 +101,7 @@ const projects = [
     image: "/project9.jpg",
     tags: ["Flutter", "Dart", "REST API", "Health Tracking", "Mobile UI"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Furqan-khan-ali/nutrition-project/tree/main/nutrition_app",
     featured: false,
   },
 ];
