@@ -101,15 +101,15 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-1">
-                      <span className="text-sm text-[#f5f5f5]/80">{skill.name}</span>
+                      {<span className="text-sm text-[#f5f5f5]/80">{skill.name}</span>}
                       <span className="text-sm text-[#6366f1]">{skill.level}%</span>
                     </div>
-                    <div className="h-2 bg-[#2a2a2a] rounded-full overflow-hidden">
+                    {<div className="h-2 bg-[#2a2a2a] rounded-full overflow-hidden">
                       <div
                         className="h-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
                       />
-                    </div>
+                    </div>}
                   </div>
                 ))}
               </div>

@@ -55,10 +55,7 @@ export default function About() {
                 <div className="text-3xl sm:text-4xl font-bold gradient-text">15+</div>
                 <div className="text-[#f5f5f5]/60 text-sm mt-1">Projects Completed</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold gradient-text">10+</div>
-                <div className="text-[#f5f5f5]/60 text-sm mt-1">Happy Clients</div>
-              </div>
+              
             </div>
           </div>
 
